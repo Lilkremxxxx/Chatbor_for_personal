@@ -1,0 +1,21 @@
+├── main.py          # Entry point: run LangGraph application
+├── graph/
+│ ├── __init__.py
+│ ├── planner.py     # LLM reasoning & routing to tools
+│ ├── executor.py    # Tool executor (calendar, email...)
+│ ├── tools.py       # Tool handlers: Google Calendar, Gmail...
+│ ├── memory.py      # Short & long-term memory modules
+│ └── nodes.py       # Register LangGraph nodes
+├── config/
+│ ├── settings.py    # Load env variables, Gemini API key, paths
+│ └── prompts/       # Prompt templates for planner, tools...
+│ ├── planner.txt
+│ ├── summarize.txt
+│ └── classify.txt
+├── data/
+│ └── memory_store.json   # Optional local memory file
+├── docker/
+│ ├── Dockerfile          # App container
+│ └── docker-compose.yml  # Include optional db, chroma, UI...
+├── requirements.txt
+└── README.md
